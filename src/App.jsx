@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Inicio from './paginas/inicio'
 import Sobre from './paginas/sobre';
 import Contact from './paginas/contact';
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
     <div className="App">
-      <Router>
         <Navbar />
-        <Switch>
-          <Route path='/' exact component={Inicio}/>
-          <Route path='/sobre' component={Sobre}/>
-          <Route path='/contact' component={Contact}/>
-        </Switch>
-      </Router>
+        <ItemListContainer />
+        <Inicio />
+        <Sobre />
+        <Contact />
     </div>
   );
 }
