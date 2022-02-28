@@ -1,6 +1,6 @@
 import React from 'react'
 import twitch from '../media/twitch.jpg' 
-import CartWidget from '../components/CartWidget'
+import CartWidget from './CartWidget'
 
 
 

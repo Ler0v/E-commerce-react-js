@@ -44,4 +44,7 @@
 .carrito{
   width: 50px;
 }
+.card{
+  border: solid 4px black;
+}
 
