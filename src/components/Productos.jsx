@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Productos = (props) => {
+const Products = (props) => {
     let {titulo, descripcion, comprar} = props
   return (
     <div className='col-lg-4 col-md-6 p-3'>
@@ -19,4 +19,4 @@ const Productos = (props) => {
   )
 }
 
-export default Productos
+export default Products
