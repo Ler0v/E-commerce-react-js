@@ -13,7 +13,7 @@ const Products = (props) => {
             <a href="#" className="btn btn-primary">{comprar}</a>          
           </div>
           <div>
-            <ItemCount />
+            <ItemCount stock={5} iniciador={1}/>
           </div>
         </div>
     </div>

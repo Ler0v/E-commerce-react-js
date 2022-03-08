@@ -2,8 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 
 const ItemCount = (props) => {
-    let {stock} = props
-    const [inicial, setInicial] = useState(1)
+    let {stock,iniciador} = props
+    const [inicial, setInicial] = useState(iniciador)
   return (
   <div className="counter row">
         <button className='btn col-lg-3 col-md-3' onClick={()=>{
