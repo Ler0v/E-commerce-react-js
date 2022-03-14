@@ -1,17 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Products from './Products'
 import res from '../media/res.png'
+import ItemList from './ItemList'
 
+
+
+// console.log(productos)
+
+// const getProducts = new Promise ((resolve, reject) => {
+//   let condition = true
+//   if (condition){
+//     setTimeout(() => {
+//       resolve(productos)
+//     }, 4000)
+//   }
+//   else{
+//     reject ('Error, no hay productos')
+//   }
+// })
 
 
 const ItemListContainer = (props) => {
   return (
+    <div>
+      <h2></h2>
     <section className='row'>
-       <Products imagen = {res} titulo="Producto1" descripcion="este es el producto 1" comprar="añadir al carrito" />
-       <Products  imagen = {res} titulo="Producto2" descripcion="este es un producto2" comprar="añadir al carrito" />
-       <Products imagen = {res} titulo="Producto3" descripcion="este es un producto3" comprar="añadir al carrito" />
+       <ItemList />
     </section>
+    
+    </div>
   )
 }
 
 export default ItemListContainer
+
