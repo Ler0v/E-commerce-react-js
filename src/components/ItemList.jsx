@@ -2,7 +2,9 @@ import React, {useEffect, useState} from 'react'
 import Products from './Products'
 
 
-class Product {
+
+
+class Item {
     constructor(id, nombre, precio, descripcion, img) {
         this.id = id;
         this.nombre = nombre;
@@ -13,24 +15,25 @@ class Product {
 }
 
 const ItemList = () => {
-
-    const productos = [
-      {titulo:"Producto1", descripcion:"este es el producto 1", comprar:"añadir al carrito",},
-      {titulo:"Producto1", descripcion:"este es el producto 1", comprar:"añadir al carrito",},
-      {titulo:"Producto1", descripcion:"este es el producto 1", comprar:"añadir al carrito",},
-      {titulo:"Producto1", descripcion:"este es el producto 1", comprar:"añadir al carrito",},
-      {titulo:"Producto1", descripcion:"este es el producto 1", comprar:"añadir al carrito",},
-      {titulo:"Producto1", descripcion:"este es el producto 1", comprar:"añadir al carrito",}
+    const [listaItem, setListaItem] = useState([])
+    const [loading, setLoading] = useState(true);
+    const items = [
+     new Item ( 1, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
+     new Item ( 2, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
+     new Item ( 3, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
+     new Item ( 4, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
+     new Item ( 5, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
+     new Item ( 6, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png')
     ]
 
 
 
-    const [listaItem, setListaItem] = useState([])
-    const getItem = new Promise((reject, resolve) => {
-        const condicion = false
+    
+    const getItem = new Promise((resolve, reject) => {
+        const condicion = true;  
         if (condicion){
             setTimeout(() => {
-                resolve(productos)
+                resolve(items)
             },3000)
         }
         else{
@@ -42,14 +45,14 @@ const ItemList = () => {
     useEffect (() => {
         getItem
         .then((respuesta) => setListaItem(respuesta))
-        .catch( (error) => console.log(error) )
+        .catch( (error) => console.log(error))
+        .finally(()=>setLoading(false));
     },[]) 
 
   return (
-
     <>
-        {listaItem.map((producto) => {
-            <Product key = {producto.id} name = {producto.nombre} img = {producto.img}/>
+        {loading ? <p >Cargando...</p> :listaItem.map((item) => {
+            return <Products key = {item.id} imagen = {item.imagen} titulo = {item.titulo} descripcion = {item.descripcion}/>
         })}
     </>
   )
