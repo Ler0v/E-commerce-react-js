@@ -3,6 +3,10 @@ import ItemCount from './ItemCount'
 
 const Products = (props) => {
     let {imagen, titulo, descripcion,precio} = props
+
+    const onAdd = () => {
+      console.log("Producto agregado al carrito")
+    }
   return (
     <div className='col-lg-4 col-md-6 p-3'>
         <div className="card">

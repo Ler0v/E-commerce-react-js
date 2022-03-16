@@ -27,8 +27,6 @@ const ItemList = () => {
     ]
 
 
-
-    
     const getItem = new Promise((resolve, reject) => {
         const condicion = true;  
         if (condicion){
@@ -48,6 +46,8 @@ const ItemList = () => {
         .catch( (error) => console.log(error))
         .finally(()=>setLoading(false));
     },[]) 
+
+
 
   return (
     <>

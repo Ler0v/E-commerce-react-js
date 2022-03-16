@@ -3,9 +3,10 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './App.css';
 import Navbar from './components/Navbar'
 import Inicio from './paginas/inicio'
-import Sobre from './paginas/sobre';
-import Contact from './paginas/contact';
+import Sobre from './paginas/m4a1';
+import Contact from './paginas/awp';
 import ItemListContainer from "./components/ItemListContainer";
+import './components/ConsumiendoApis'
 
 
 function App() {
