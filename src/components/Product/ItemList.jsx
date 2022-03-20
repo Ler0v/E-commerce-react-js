@@ -32,7 +32,7 @@ const ItemList = () => {
         if (condicion){
             setTimeout(() => {
                 resolve(items)
-            },3000)
+            },1000)
         }
         else{
             reject('Hay problemas, no llega la lista')

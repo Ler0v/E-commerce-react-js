@@ -1,6 +1,6 @@
 import React from 'react'
 import Csgo from '../media/csgoskins.png'
-import CartWidget from './CartWidget'
+import CartWidget from '../Cart/CartWidget'
 
 
 
