@@ -18,12 +18,12 @@ const ItemList = () => {
     const [listaItem, setListaItem] = useState([])
     const [loading, setLoading] = useState(true);
     const items = [
-     new Item ( 1, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
-     new Item ( 2, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
-     new Item ( 3, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
-     new Item ( 4, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
-     new Item ( 5, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png'),
-     new Item ( 6, "Producto1", 5000, "esta es una descripcion", '/static/media/res.18194c66cf57d2784c1b.png')
+     new Item ( 1, "Producto1", 5000, "esta es una descripcion", 'https://i.postimg.cc/43KVSgVW/res.png'),
+     new Item ( 2, "Producto1", 5000, "esta es una descripcion", 'https://i.postimg.cc/43KVSgVW/res.png'),
+     new Item ( 3, "Producto1", 5000, "esta es una descripcion", 'https://i.postimg.cc/43KVSgVW/res.png'),
+     new Item ( 4, "Producto1", 5000, "esta es una descripcion", 'https://i.postimg.cc/43KVSgVW/res.png'),
+     new Item ( 5, "Producto1", 5000, "esta es una descripcion", 'https://i.postimg.cc/43KVSgVW/res.png'),
+     new Item ( 6, "Producto1", 5000, "esta es una descripcion", 'https://i.postimg.cc/43KVSgVW/res.png')
     ]
 
 
