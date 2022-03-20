@@ -1,6 +1,7 @@
 import React from 'react'
-import Csgo from '../media/csgoskins.png'
+import Csgo from '../Media/csgoskins.png'
 import CartWidget from '../Cart/CartWidget'
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,13 +17,13 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link active" href="inicio">AK 47</a>
+            <Link className="nav-link active" to="inicio" > Inicio </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" href="sobre">M4A1</a>
+            <Link className="nav-link active" to="sobre"> Sobre Nosotros </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" href='contact'>AWP</a>
+            <Link className="nav-link active" to="contact"> Contacto</Link>
           </li>
         </ul>
         <form className="d-flex">

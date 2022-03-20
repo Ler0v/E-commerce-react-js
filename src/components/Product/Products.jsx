@@ -14,8 +14,8 @@ const Products = (props) => {
           <div className="card-body">
             <h5 className="card-title">{titulo}</h5>
             <p className="card-text">{descripcion}</p>
-            <p className="card-text">{precio  }</p>
-            <a href="#" className="btn btn-primary">comprar</a>          
+            <p className="card-text">{precio}</p>
+            <a href="#" className="btn btn-primary">Sumar al carrito</a>          
           </div>
           <div>
             <ItemCount stock={5} iniciador={1}/>
