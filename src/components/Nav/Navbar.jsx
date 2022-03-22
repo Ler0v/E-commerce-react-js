@@ -17,13 +17,13 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <Link className="nav-link active" to="inicio" > Inicio </Link>
+            <Link className="nav-link active" to="/" > Inicio </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link active" to="sobre"> Sobre Nosotros </Link>
+            <Link className="nav-link active" to="/categoria/ak"> AKS </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link active" to="contact"> Contacto</Link>
+            <Link className="nav-link active" to="/categoria/m4"> M4</Link>
           </li>
         </ul>
         <form className="d-flex">

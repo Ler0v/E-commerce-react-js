@@ -1,21 +1,22 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import { useNavigate } from 'react-router-dom';
 
-const Products = (props) => {
-    let {imagen, titulo, descripcion,precio} = props
+const Products = ({item}) => {
 
-    const onAdd = () => {
-      console.log("Producto agregado al carrito")
-    }
+    const navigate = useNavigate();
+
   return (
     <div className='col-lg-4 col-md-6 p-3'>
         <div className="card">
-          <img src={imagen} className="imgProd" />
+          <img src={item.imagen} className="imgProd" />
           <div className="card-body">
-            <h5 className="card-title">{titulo}</h5>
-            <p className="card-text">{descripcion}</p>
-            <p className="card-text">{precio}</p>
-            <a href="#" className="btn btn-primary">Sumar al carrito</a>          
+            <h5 className="card-title">{item.name}</h5>
+            <p className="card-text">{item.description}</p>
+            <p className="card-text">{item.price}</p>
+            <button className="btn btn-primary" onClick={ () => {
+              navigate(`/item/${item.id}`)
+            }}>Ver mas</button>          
           </div>
           <div>
             <ItemCount stock={5} iniciador={1}/>
