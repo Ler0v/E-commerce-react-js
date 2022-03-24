@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
   return (
 
     <section id='sectionItemDetail' className='contenedor row'>
-      <ItemDetail item={item}/>
+      {item && <ItemDetail item={item}/>}
     </section>
   )
 }

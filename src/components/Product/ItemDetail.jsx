@@ -1,7 +1,13 @@
 import React from 'react';
+import ItemCount from './ItemCount';
 
 const ItemDetail = ({item}) => {
 
+    const onAdd = (cantidadAgregada) => { 
+        
+        alert(`agregaste ${cantidadAgregada} al carrito`)
+
+    }    
   return (
     <>
         <div className="card mb-3">
@@ -15,6 +21,7 @@ const ItemDetail = ({item}) => {
                     <p className="card-text">{item.description}</p>
                     <p className="card-text"><small className="text-muted">Precio: {item.price}$</small></p>
                 </div>
+                <ItemCount stock={5} iniciador={1} onAdd={onAdd}/>
                 </div>
             </div>
         </div>
