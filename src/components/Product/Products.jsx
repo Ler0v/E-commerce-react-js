@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemCount from './ItemCount'
 import { useNavigate } from 'react-router-dom';
 
 const Products = ({item}) => {
@@ -17,9 +16,6 @@ const Products = ({item}) => {
             <button className="btn btn-primary" onClick={ () => {
               navigate(`/item/${item.id}`)
             }}>Ver mas</button>          
-          </div>
-          <div>
-            <ItemCount stock={5} iniciador={1}/>
           </div>
         </div>
     </div>

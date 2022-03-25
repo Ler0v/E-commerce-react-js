@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
       fetch('https://6231d93259070d92733c73a8.mockapi.io/Producto')
       .then((respuesta) => respuesta.json())
-      .then((data) => setItem(data.find((op)=>op.id === id)))
+      .then((data) => setItem(data.find((item)=>item.id === id)))
       .catch((error) => console.log(error))
   },[])
 
