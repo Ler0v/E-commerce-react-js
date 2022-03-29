@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { CartContext } from '../Context/CartContext';
 import ItemCount from './ItemCount';
 
 const ItemDetail = ({item}) => {
 
+    const carritoContext = useContext(CartContext)
+    
+    
+    const [cantidadAgregada, setCantidadAgregada] = useState(0)
+    const [stockProducto, setStockProducto] = useState(5)
+
     const onAdd = (cantidadAgregada) => { 
         
-        alert(`agregaste ${cantidadAgregada} al carrito`)
+        setCantidadAgregada(cantidadAgregada)
+        setStockProducto(stockProducto - cantidadAgregada)
+        carritoContext.addItem(item, cantidadAgregada)
 
-    }    
+    }
+    
+
   return (
     <>
         <div className="card mb-3">
@@ -21,7 +32,7 @@ const ItemDetail = ({item}) => {
                     <p className="card-text">{item.description}</p>
                     <p className="card-text"><small className="text-muted">Precio: {item.price}$</small></p>
                 </div>
-                <ItemCount stock={5} iniciador={1} onAdd={onAdd}/>
+                <ItemCount stock={stockProducto} iniciador={1} onAdd={onAdd} cantidadAgregada={cantidadAgregada} setCantidadAgregada={setCantidadAgregada}/>
                 </div>
             </div>
         </div>
