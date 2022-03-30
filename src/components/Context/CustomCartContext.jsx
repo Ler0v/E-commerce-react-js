@@ -11,11 +11,20 @@ const CustomCartContext = ({children}) => {
             cantidad
         }
         setProductoCarrito([...productosCarrito, newProduct])
+
+        const borrarItem = (itemId) =>{
+            const listaActualizada = productosCarrito.filter(producto=>producto.item.id !== itemId)
+            setProductosCarrito(listaActualizada);
+          }
+      
+          const clear = () =>{
+            setProductosCarrito([]);
+        }
     }
 
 
   return (
-    <CartContext.Provider value={{productosCarrito, addItem}}>
+    <CartContext.Provider value={{productosCarrito, addItem, borrarItem, clear, isInCart}}>
         {children}
     </CartContext.Provider>
   )
