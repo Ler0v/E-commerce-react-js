@@ -26,7 +26,7 @@ const Cart = () => {
                 <tbody>
                     {
                         productosCarrito.map(producto => (
-                        <CartItem key={producto.item.id} productoCarrito={producto}/>
+                            <CartItem key={producto.item.id} productoCarrito={producto}/>
                         ))
                     }
                 </tbody>
