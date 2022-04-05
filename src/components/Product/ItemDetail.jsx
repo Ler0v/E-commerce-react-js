@@ -28,11 +28,11 @@ const ItemDetail = ({item}) => {
                 </div>
                 <div className="col-md-8">
                 <div className="card-body">
-                    <h5 className="card-title">{item.name}</h5>
-                    <p className="card-text">{item.description}</p>
+                    <h5 className="card-title">{item.title}</h5>
+                    <p className="card-text">{item.descripcion}</p>
                     <p className="card-text"><small className="text-muted">Precio: {item.price}$</small></p>
                 </div>
-                <ItemCount stock={stockProducto} iniciador={1} onAdd={onAdd} cantidadAgregada={cantidadAgregada} setCantidadAgregada={setCantidadAgregada}/>
+                {!carritoContext.isInCart(item.id) ? <ItemCount stock={stockProducto} iniciador={1} onAdd={onAdd} cantidadAgregada={cantidadAgregada} setCantidadAgregada={setCantidadAgregada}/> :'El producto ya esta en el carrito'}
                 </div>
             </div>
         </div>

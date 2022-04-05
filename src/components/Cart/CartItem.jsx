@@ -10,7 +10,7 @@ const carritoContext = useContext(CartContext);
         <>
         <tr>
             <td><img src={productoCarrito.item.imagen} style={{height:"200px"}} alt="Imagen Producto"/></td>
-            <td><p>{productoCarrito.item.name}</p></td>
+            <td><p>{productoCarrito.item.title}</p></td>
             <td><p>{productoCarrito.cantidad}</p></td>
             <td><p>{productoCarrito.item.price}</p></td>
             <td><p>{productoCarrito.item.price*productoCarrito.cantidad}</p></td>

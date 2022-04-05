@@ -16,11 +16,11 @@ const Cart = () => {
            <table className="table">
                 <thead>
                     <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">SubTotal</th>
+                        <th scope="col"></th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">SubTotal</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,8 +30,10 @@ const Cart = () => {
                         ))
                     }
                 </tbody>
-                <button onClick={carritoContext.clear}>Vaciar Carrito</button>
             </table>
+           <div>
+                <button onClick={carritoContext.clear}>Vaciar Carrito</button>
+           </div>
       </div>
        
   )

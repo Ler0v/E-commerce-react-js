@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './App.css';
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Navbar from './components/Nav/Navbar'
 import ItemListContainer from "./components/Product/ItemListContainer";
 import ItemDetailContainer from "./components/Product/ItemDetailContainer";
