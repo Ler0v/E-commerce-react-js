@@ -8,7 +8,7 @@ const ItemDetail = ({item}) => {
     
     
     const [cantidadAgregada, setCantidadAgregada] = useState(0)
-    const [stockProducto, setStockProducto] = useState(5)
+    const [stockProducto, setStockProducto] = useState(item.stock)
 
     const onAdd = (cantidadAgregada) => { 
         
@@ -32,7 +32,7 @@ const ItemDetail = ({item}) => {
                     <p className="card-text">{item.descripcion}</p>
                     <p className="card-text"><small className="text-muted">Precio: {item.price}$</small></p>
                 </div>
-                {!carritoContext.isInCart(item.id) ? <ItemCount stock={stockProducto} iniciador={1} onAdd={onAdd} cantidadAgregada={cantidadAgregada} setCantidadAgregada={setCantidadAgregada}/> :'El producto ya esta en el carrito'}
+                {!carritoContext.isInCart(item.id) ? <ItemCount stock={item.stock} iniciador={1} onAdd={onAdd} cantidadAgregada={cantidadAgregada} setCantidadAgregada={setCantidadAgregada}/> :'El producto ya esta en el carrito'}
                 </div>
             </div>
         </div>
