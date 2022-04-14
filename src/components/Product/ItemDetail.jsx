@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../Context/CartContext';
 import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom'
+
 
 const ItemDetail = ({item}) => {
 
@@ -32,7 +34,7 @@ const ItemDetail = ({item}) => {
                     <p className="card-text">{item.descripcion}</p>
                     <p className="card-text"><small className="text-muted">Precio: {item.price}$</small></p>
                 </div>
-                {!carritoContext.isInCart(item.id) ? <ItemCount stock={item.stock} iniciador={1} onAdd={onAdd} cantidadAgregada={cantidadAgregada} setCantidadAgregada={setCantidadAgregada}/> :'El producto ya esta en el carrito'}
+                {!carritoContext.isInCart(item.id) ?<ItemCount stock={item.stock} iniciador={1} onAdd={onAdd} cantidadAgregada={cantidadAgregada} setCantidadAgregada={setCantidadAgregada}/> :'Producto ya agregado al carrito!'}
                 </div>
             </div>
         </div>

@@ -32,8 +32,8 @@ const Cart = () => {
              total: carritoContext.totalQty(),
              date: Timestamp.fromDate(new Date())
         }
-        
-        ordersCollection = collection(db, 'orders')
+        console.log('new object', newObject)
+        const ordersCollection = collection(db, 'orders')
         const docReference = await addDoc(ordersCollection, newObject)
         console.log('referencia', docReference)
     }

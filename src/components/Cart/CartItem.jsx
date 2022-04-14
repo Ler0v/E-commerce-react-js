@@ -15,7 +15,7 @@ const carritoContext = useContext(CartContext);
             <td><p>{productoCarrito.item.price}</p></td>
             <td><p>{productoCarrito.item.price*productoCarrito.cantidad}</p></td>
             <button onClick={()=>carritoContext.borrarItem(productoCarrito.item.id)}>Eliminar Producto</button>
-            </tr>
+        </tr>
         </>
     )
 }
