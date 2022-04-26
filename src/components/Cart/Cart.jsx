@@ -35,7 +35,9 @@ const Cart = () => {
         console.log('new object', newObject)
         const ordersCollection = collection(db, 'orders')
         const docReference = await addDoc(ordersCollection, newObject)
+        alert(`Se ha cargado la orden: ${docReference.id}`);
         console.log('referencia', docReference)
+
     }
 
 
