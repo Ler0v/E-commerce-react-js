@@ -12,7 +12,7 @@ const Cart = () => {
     console.log('Productos Carrito', carritoContext.productosCarrito)
     
     
-    const enviarOrden = async(e) => {
+    const enviarOrden = async (e) => {
         e.preventDefault()
         
         const nombre = e.target[0].value
